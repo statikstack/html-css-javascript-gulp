@@ -1,0 +1,142 @@
+:root {
+  --electromagnetic: #2f3640;
+  --hint-of-pensive: #dcdde1;
+  --lynx-white: #f5f6fa;
+  --pico-void: #192a56;
+  --rise-n-shine: #fbc531;
+  --text-shadow: 0px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--lynx-white);
+  border-top: 4px solid var(--rise-n-shine);
+  color: var(--electromagnetic);
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+p {
+  font-weight: 400;
+  margin: 0;
+  max-width: 80ch;
+  padding: 0;
+}
+
+p {
+  margin: 1rem 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+.header {
+  background-color: var(--pico-void);
+}
+
+.navbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 1rem;
+}
+
+.navbar__brand {
+  align-items: center;
+  color: var(--lynx-white);
+  display: flex;
+}
+
+.navbar__brand img {
+  margin-right: 1rem;
+}
+
+.navbar__brand span {
+  font-size: 1.5rem;
+}
+
+.navbar__social {
+  align-items: center;
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar__social li {
+  margin-left: 1rem;
+}
+
+.navbar__social a {
+  display: block;
+}
+
+.navbar__social svg {
+  fill: var(--hint-of-pensive);
+  transition: fill 200ms;
+  width: 1.5rem;
+}
+
+.navbar__social a:hover svg {
+  fill: var(--lynx-white);
+}
+
+.hero {
+  padding: 1rem;
+  text-align: center;
+}
+
+.hero h1 {
+  color: var(--lynx-white);
+  font-size: 3rem;
+  font-weight: 700;
+  text-shadow: var(--text-shadow);
+}
+
+.hero h2 {
+  color: var(--lynx-white);
+  font-size: 2rem;
+  padding: 1rem;
+  text-shadow: var(--text-shadow);
+}
+
+.main {
+  display: grid;
+  grid-gap: 2rem;
+  grid-template-columns: repeat(2, 1fr);
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 2rem 1rem;
+}
+
+.section h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .main {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero h2 {
+    font-size: 1.5rem;
+  }
+}
